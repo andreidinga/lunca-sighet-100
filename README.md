@@ -26,3 +26,13 @@ Actualizarea rulează zilnic la 9:20 și 18:20 (ora României) și face push doa
 s-a schimbat ceva.
 
 `.nojekyll` este necesar ca GitHub Pages să servească fișierele ca atare, fără Jekyll.
+
+## Activarea Pages (un singur pas, manual)
+
+Pages nu a putut fi activat automat: crearea unui site Pages cere drepturi de
+administrator pe repo, pe care nu le are nici tokenul sesiunii, nici
+`GITHUB_TOKEN` din Actions. Se face o singură dată, din interfață:
+
+**Settings → Pages → Source: „Deploy from a branch" → Branch: `main` / `(root)` → Save.**
+
+După asta, site-ul se reconstruiește singur la fiecare push pe `main`.
