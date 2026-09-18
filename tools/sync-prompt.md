@@ -1,9 +1,25 @@
 # Prompt pentru sarcina programată de sincronizare
 
-Sarcină recurentă, `CRON_TZ=Europe/Bucharest 20 9,18 * * *` (9:20 și 18:20 ora României),
-pe repo-ul `andreidinga/lunca-sighet-100`, branch `main`.
+Se rulează ca **routine** Claude Code (sarcină programată permanentă, în cloud):
+<https://claude.ai/code/routines> → **New routine**.
 
-Textul de mai jos e de sine stătător — se copiază ca prompt al sarcinii programate.
+| câmp | valoare |
+| --- | --- |
+| Repositories | `andreidinga/lunca-sighet-100` |
+| Schedule | două declanșatoare zilnice: **9:20** și **18:20**, ora locală (se introduce ora locală, se convertește automat) — sau un cron `20 9,18 * * *` setat cu `/schedule update` dintr-un terminal local |
+| Instructions | textul de sub linia orizontală, copiat integral |
+| Connectors | niciunul — sincronizarea nu are nevoie de conectori |
+| Environment | Default (Trusted) e suficient |
+
+Fără setare de aprobare: routine-ele rulează autonom, fără prompturi de permisiune.
+Rulările pornesc cu câteva minute întârziere față de ora fixată (stagger constant).
+
+Fiecare rulare clonează repo-ul de la zero, de pe branch-ul implicit `main`.
+Push-ul direct pe `main` e acceptat pentru că toate commit-urile de acolo sunt ale tale;
+dacă `main` devine branch protejat, routine-ul nu va mai putea face push și promptul
+trebuie schimbat să deschidă un PR dintr-un branch `claude/...`.
+
+Textul de mai jos e de sine stătător — se copiază ca prompt („Instructions") al routine-ului.
 
 ---
 
