@@ -37,8 +37,6 @@ h2{font-size:24px;font-weight:600;letter-spacing:.005em}
 h3{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--ink-2)}
 :focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 [hidden]{display:none!important}
-
-/* title block */
 .band{background:var(--band);color:var(--on-band);padding-block:22px 16px}
 .band .eyebrow{color:var(--on-band-2)}
 .tb{display:grid;grid-template-columns:minmax(240px,1fr) 2.2fr;border:1px solid var(--band-rule)}
@@ -52,172 +50,12 @@ h3{font-size:13px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;c
 .tb-grid div:nth-child(6){grid-column:span 2}
 .tb-grid dt{font:600 10px/1.2 var(--f-d);letter-spacing:.14em;text-transform:uppercase;color:var(--on-band-2)}
 .tb-grid dd{margin:3px 0 0;font-size:13.5px;line-height:1.35}
-.scope{margin:12px 0 0;font-size:13px;color:var(--on-band-2)}
-.scope-full{color:#E9C58F}
-
-/* tabs */
-.tabs{position:sticky;top:0;z-index:20;background:var(--surface);border-bottom:1px solid var(--rule)}
-.tabs-row{display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
-.tab{font:600 15px/1 var(--f-d);letter-spacing:.02em;text-decoration:none;color:var(--ink-2);padding:15px 12px 13px;border-bottom:3px solid transparent;white-space:nowrap}
-.tab:hover{color:var(--ink)}
-.tab[aria-selected="true"]{color:var(--ink);border-bottom-color:var(--accent)}
-
 main{padding-block:26px 40px}
 .view{display:flex;flex-direction:column;gap:22px}
 .block{background:var(--surface);border:1px solid var(--rule);padding:22px 22px 24px}
 .block h2{margin-bottom:6px}
-.lede{margin:0 0 16px;color:var(--ink-2);font-size:14px;max-width:70ch}
-.h3gap{margin:22px 0 10px}
 .note{font-size:13px;color:var(--ink-2);margin:0}
-
-/* hero */
-.hero{display:grid;grid-template-columns:1.9fr 1fr;gap:22px;align-items:stretch}
-.hero-img{margin:0;background:var(--surface);border:1px solid var(--rule)}
-.hero-img img{display:block;width:100%;height:auto}
-.hero-img figcaption{font-size:12.5px;color:var(--ink-2);padding:9px 12px}
-.imgbtn{all:unset;cursor:zoom-in;display:block}
-.imgbtn:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
-.facts{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--rule);background:var(--surface)}
-.fact{padding:14px 14px 12px;border-bottom:1px solid var(--rule);display:flex;flex-direction:column;gap:3px}
-.fact:nth-child(odd){border-right:1px solid var(--rule)}
-.fact:nth-last-child(-n+2){border-bottom:0}
-.fact-n{font:600 28px/1 var(--f-d);font-variant-numeric:tabular-nums;color:var(--ink)}
-.fact-l{font-size:12.5px;line-height:1.35;color:var(--ink-2)}
-
-.two{display:grid;grid-template-columns:1.45fr 1fr;gap:22px;align-items:start}
-.now{list-style:none;margin:0;padding:0;counter-reset:n}
-.now li{display:grid;grid-template-columns:132px 1fr;column-gap:14px;row-gap:2px;padding:11px 0;border-top:1px solid var(--rule)}
-.now li:first-child{border-top:0}
-.when{grid-row:span 2;align-self:start;background:var(--sunk);color:var(--ink);padding:3px 7px;font-size:11.5px;text-align:center;border-radius:2px}
-.what{font-size:14.5px;line-height:1.45}
-.goto{font-size:12.5px;color:var(--accent);text-decoration:none;font-weight:500}
-.goto:hover{text-decoration:underline}
-
-.swatches{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
-.swatches li{display:grid;grid-template-columns:44px 1fr auto;gap:12px;align-items:center;padding:8px 0;border-top:1px solid var(--rule)}
-.swatches li:first-child{border-top:0}
-.chip{width:44px;height:30px;border:1px solid rgba(0,0,0,.18);display:block}
-.sw-t{display:flex;flex-direction:column;line-height:1.3;font-size:13.5px}
-.sw-t span{color:var(--ink-2);font-size:12.5px}
-.sw-s{color:var(--ink-2);font-size:11px;text-align:right}
-.rules{margin:0;padding-left:18px;font-size:14px;display:flex;flex-direction:column;gap:6px}
-
-.pkgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:0;border-top:1px solid var(--rule);border-left:1px solid var(--rule);margin-top:8px}
-.pkcell{display:grid;grid-template-columns:1fr auto;gap:4px 10px;padding:12px 14px;border-right:1px solid var(--rule);border-bottom:1px solid var(--rule);text-decoration:none}
-.pkcell:hover{background:var(--sunk)}
-.pk-n{font:600 16px/1.2 var(--f-d)}
-.pk-w{grid-column:1 / -1;color:var(--ink-2);font-size:11px}
-
-.pill{font:700 10.5px/1 var(--f-d);letter-spacing:.12em;padding:4px 7px 3px;border-radius:2px;white-space:nowrap;align-self:start;justify-self:start}
-.pill-ok{background:var(--ok-bg);color:var(--ok)} .pill-warn{background:var(--warn-bg);color:var(--warn)} .pill-crit{background:var(--crit-bg);color:var(--crit)}
-.dot{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:8px;vertical-align:1px}
-.dot-ok{background:var(--ok)} .dot-warn{background:var(--warn)} .dot-crit{background:var(--crit)}
-
-/* decisions */
-.filters{display:flex;gap:6px;flex-wrap:wrap;margin-bottom:12px}
-.fbtn{font:600 13px/1 var(--f-d);letter-spacing:.04em;background:var(--surface);color:var(--ink-2);border:1px solid var(--rule);padding:8px 12px;cursor:pointer}
-.fbtn[aria-pressed="true"]{background:var(--band);color:var(--on-band);border-color:var(--band)}
-.tablewrap{overflow-x:auto}
-table{border-collapse:collapse;width:100%;font-size:14px}
-th{font:600 11px/1.2 var(--f-d);letter-spacing:.12em;text-transform:uppercase;color:var(--ink-2);text-align:left;padding:8px 10px;border-bottom:2px solid var(--ink)}
-td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
-.dtable td:first-child a{text-decoration:none;font-weight:500}
-.dtable td:first-child a:hover{text-decoration:underline}
-.dtable td.mono{white-space:nowrap;color:var(--ink-2)}
-.r{text-align:right}
-
-/* packages */
-.pk-layout{display:grid;grid-template-columns:220px 1fr;gap:22px;align-items:start}
-.pk-index{position:sticky;top:64px;display:flex;flex-direction:column;gap:8px}
-.pk-index ul{list-style:none;margin:0;padding:0;border-left:2px solid var(--rule)}
-.pk-index a{display:block;padding:5px 10px;font-size:14px;text-decoration:none;color:var(--ink-2)}
-.pk-index a:hover,.pk-index a.on{color:var(--ink);background:var(--surface)}
-.pk-list{display:flex;flex-direction:column;gap:22px;min-width:0}
-.pk{background:var(--surface);border:1px solid var(--rule);scroll-margin-top:70px}
-.pk-h{display:flex;flex-wrap:wrap;align-items:center;gap:10px 14px;padding:16px 20px;border-bottom:1px solid var(--rule)}
-.pk-h h2{font-size:23px;margin:0}
-.pk-when{margin-left:auto;color:var(--ink-2);font-size:11.5px}
-.cols{display:grid;grid-template-columns:1.25fr 1fr .9fr}
-.col{padding:14px 20px 16px;border-right:1px solid var(--rule)}
-.col:last-child{border-right:0}
-.col h3{margin-bottom:8px;display:flex;align-items:center;gap:8px}
-.col h3::before{content:"";width:10px;height:10px;display:inline-block}
-.c-ok h3::before{background:var(--ok)} .c-crit h3::before{background:var(--crit)} .c-next h3::before{background:var(--band);outline:1px solid var(--rule)}
-.col ul{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:7px;font-size:14px;line-height:1.5}
-.col li::marker{color:var(--ink-2)}
-.col b{font-weight:600}
-.money{margin:0 20px 16px;padding:12px 16px;background:var(--accent-soft);border-left:3px solid var(--accent)}
-.money h3{color:var(--accent);margin-bottom:6px}
-.money h3 .mono{font-size:10px;letter-spacing:.05em;text-transform:none;opacity:.8;margin-left:6px}
-.money ul{margin:0;padding-left:16px;font-size:14px;display:flex;flex-direction:column;gap:5px}
-.thumbs{display:flex;gap:12px;flex-wrap:wrap;padding:0 20px 16px}
-.thumb{width:220px;max-width:100%;border:1px solid var(--rule);background:var(--sunk)}
-.thumb img{display:block;width:100%;aspect-ratio:16/10;object-fit:cover}
-.thumb span{display:block;font-size:12px;padding:6px 8px;color:var(--ink-2);background:var(--surface)}
-.doclinks{padding:12px 20px 18px;border-top:1px solid var(--rule)}
-.doclinks h3{margin-bottom:8px}
-.dl-row{display:flex;flex-wrap:wrap;gap:6px}
-.docbtn{font:inherit;cursor:pointer;color:var(--ink);background:var(--surface)}
-.dl-row .docbtn{display:inline-flex;gap:8px;align-items:baseline;border:1px solid var(--rule);padding:6px 10px;font-size:13px;text-align:left}
-.dl-row .docbtn:hover{border-color:var(--ink-2);background:var(--sunk)}
-.dl-row .docbtn .mono{color:var(--ink-2);font-size:10.5px}
-
-/* gallery */
-.gal{display:grid;gap:16px}
-.gal-wide{grid-template-columns:repeat(auto-fill,minmax(340px,1fr))}
-.gal-std{grid-template-columns:repeat(auto-fill,minmax(260px,1fr))}
-.gcard{margin:0;border:1px solid var(--rule);background:var(--sunk)}
-.gcard img{display:block;width:100%;height:auto;max-height:420px;object-fit:contain;background:#fff}
-.gcard figcaption{padding:8px 10px;background:var(--surface);display:flex;flex-direction:column;font-size:13px;line-height:1.35}
-.gcard figcaption span{color:var(--ink-2);font-size:12px}
-
-/* documents */
-.dgroup{margin:20px 0 10px}
-.dgroup:first-of-type{margin-top:4px}
-.dgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:10px}
-.dcard{display:grid;grid-template-rows:auto 1fr auto;gap:4px;text-align:left;border:1px solid var(--rule);padding:12px 14px;min-height:112px}
-.dcard:hover{border-color:var(--ink-2);background:var(--sunk)}
-.dc-t{font:600 16px/1.2 var(--f-d)}
-.dc-d{font-size:13px;color:var(--ink-2);line-height:1.4}
-.dc-m{color:var(--ink-2);font-size:10.5px}
-
-/* budget */
-.btotal{display:flex;flex-wrap:wrap;gap:12px 40px;margin:4px 0 16px;padding:14px 0;border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)}
-.btotal div{display:flex;flex-direction:column;gap:4px}
-.big{font-size:28px;font-weight:500;font-variant-numeric:tabular-nums}
-.btable td.mono,.rtable td.mono{white-space:nowrap;font-variant-numeric:tabular-nums}
-.btable .b{font-weight:600}
-.btable .muted{color:var(--ink-2);font-size:13px}
-.grow td{background:var(--sunk);font:600 13px/1.2 var(--f-d);letter-spacing:.08em;text-transform:uppercase}
-.ttot td{font-weight:700;border-top:2px solid var(--ink);border-bottom:0}
-.bar{width:170px;min-width:120px;position:relative}
-.bar span{display:block;height:8px;background:var(--accent);margin-top:6px;max-width:100%}
-.bar em{font-style:normal;font-size:10.5px;color:var(--ink-2)}
-.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
-
-/* team */
-.team{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:12px}
-.tcard{border:1px solid var(--rule);padding:14px;display:flex;flex-direction:column;gap:4px}
-.t-org{font:600 18px/1.2 var(--f-d)}
-.t-what{font-size:13px;color:var(--ink-2)}
-.tcard ul{list-style:none;margin:6px 0 0;padding:0;font-size:13.5px;display:flex;flex-direction:column;gap:3px}
-.tcard a{color:var(--accent)}
-.small{font-size:11.5px}
-.stable td{font-size:13.5px}
-
 .foot{margin-top:26px;font-size:12.5px;color:var(--ink-2)}
-
-/* overlays */
-.ov{position:fixed;inset:0;z-index:100;background:rgba(14,16,17,.94);display:flex;flex-direction:column}
-.ov-bar{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;color:#EEEDE8;font:600 16px/1.2 var(--f-d);background:#0E1011;border-bottom:1px solid #2A2F33}
-.ov-x{font:600 13px/1 var(--f-d);letter-spacing:.06em;background:transparent;color:#EEEDE8;border:1px solid #4F565B;padding:8px 12px;cursor:pointer}
-.ov-x:hover{background:#2A2F33}
-.ov-body{flex:1;overflow:auto;display:flex;align-items:center;justify-content:center;padding:16px}
-.ov-body img{max-width:100%;max-height:100%;object-fit:contain;cursor:zoom-in;background:#fff}
-.ov-body.real{align-items:flex-start;justify-content:flex-start}
-.ov-body.real img{max-width:none;max-height:none;cursor:zoom-out}
-#ov-doc iframe{flex:1;width:100%;border:0;background:#fff}
-
 @media (max-width:980px){
   .tb{grid-template-columns:1fr}
   .tb-name{border-right:0;border-bottom:1px solid var(--band-rule)}
@@ -226,14 +64,6 @@ td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
   .tb-grid div:nth-child(2),.tb-grid div:nth-child(6){grid-column:span 2}
   .tb-grid div:nth-last-child(-n+3){border-bottom:1px solid var(--band-rule)}
   .tb-grid div:last-child{border-bottom:0}
-  .hero,.two{grid-template-columns:1fr}
-  .pk-layout{grid-template-columns:1fr}
-  .pk-index{position:static}
-  .pk-index ul{display:flex;flex-wrap:wrap;border-left:0;gap:4px}
-  .pk-index a{border:1px solid var(--rule);padding:5px 8px;font-size:13px}
-  .cols{grid-template-columns:1fr}
-  .col{border-right:0;border-bottom:1px solid var(--rule)}
-  .col:last-child{border-bottom:0}
 }
 @media (max-width:560px){
   .wrap{padding-left:16px;padding-right:16px}
@@ -241,53 +71,15 @@ td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
   .tb-grid{grid-template-columns:1fr}
   .tb-grid div:nth-child(2),.tb-grid div:nth-child(6){grid-column:auto}
   .block{padding:16px}
-  .now li{grid-template-columns:1fr}
-  .when{grid-row:auto;justify-self:start}
-  .gal-wide,.gal-std,.dgrid{grid-template-columns:1fr}
-  .pk-h,.col{padding-left:14px;padding-right:14px}
-  .money{margin-left:14px;margin-right:14px}
-  .thumbs,.doclinks{padding-left:14px;padding-right:14px}
-  .pk-when{margin-left:0}
 }
 @media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
-
-.ro{} .en{display:none}
-:root[data-lang="en"] .en{display:inline} :root[data-lang="en"] .ro{display:none}
 .band .wrap{position:relative} .band{padding-top:52px}
-.langsw{position:absolute;top:-40px;right:20px;display:flex;border:1px solid var(--band-rule)}
-.langsw button{font:600 12px/1 var(--f-d);letter-spacing:.12em;background:transparent;color:var(--on-band-2);border:0;padding:7px 10px;cursor:pointer}
-.langsw button+button{border-left:1px solid var(--band-rule)}
-.langsw button[aria-pressed="true"]{background:var(--on-band);color:var(--band)}
 .tb-grid div{grid-column:auto!important}
 .tb-grid div:nth-child(5){grid-column:span 2!important}
 @media (max-width:980px){.tb-grid div:nth-child(5){grid-column:span 2!important}}
 @media (max-width:560px){.tb-grid div:nth-child(5){grid-column:auto!important}}
 .back{display:inline-block;margin-top:12px;color:var(--on-band);font:600 14px/1 var(--f-d);letter-spacing:.04em;text-decoration:none;border:1px solid var(--band-rule);padding:8px 12px}
 .back:hover{background:var(--band-rule)}
-.jump{display:flex;gap:6px;flex-wrap:wrap;padding-block:12px}
-.jump a{font:600 14px/1 var(--f-d);text-decoration:none;color:var(--ink-2);border:1px solid var(--rule);background:var(--surface);padding:8px 12px}
-.jump a:hover{color:var(--ink);border-color:var(--ink-2)}
-.sheets{display:grid;grid-template-columns:repeat(auto-fill,minmax(330px,1fr));gap:16px}
-.sheet{margin:0;border:1px solid var(--rule);background:var(--surface);display:flex;flex-direction:column}
-.sheet .imgbtn img{display:block;width:100%;aspect-ratio:1.414/1;object-fit:contain;background:#fff;border-bottom:1px solid var(--rule)}
-.sheet.portrait .imgbtn img{aspect-ratio:1.414/1}
-.sheet figcaption{padding:10px 12px 12px;display:flex;flex-direction:column;gap:4px}
-.code{font:500 12px/1 var(--f-m);color:var(--accent)}
-.code em{font-style:normal;color:var(--ink-2);margin-left:8px}
-.st{font:600 17px/1.2 var(--f-d)}
-.sn{font-size:13px;color:var(--ink-2);line-height:1.45}
-.pages{display:grid;grid-template-columns:repeat(auto-fill,minmax(180px,1fr));gap:10px}
-.pages .imgbtn img{display:block;width:100%;border:1px solid var(--rule);background:#fff}
-.pages span{display:block;font:500 11px/1.2 var(--f-m);color:var(--ink-2);padding-top:4px}
-.photos{display:grid;grid-template-columns:repeat(auto-fill,minmax(190px,1fr));gap:12px}
-.photo{margin:0;border:1px solid var(--rule);background:var(--surface)}
-.photo img{display:block;width:100%;aspect-ratio:3/4;object-fit:cover}
-.photo figcaption{padding:7px 9px;font-size:13px;line-height:1.3}
-.photo figcaption .mono{display:block;font-size:12px}
-.photo figcaption small{color:var(--ink-2)}
-.issues{margin:0;padding-left:18px;display:flex;flex-direction:column;gap:6px;font-size:14px}
-@media (max-width:560px){.langsw{right:16px}.sheets{grid-template-columns:1fr}}
-
 .jhead{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:baseline;margin:0 0 4px}
 .jsub{color:var(--ink-2);font-size:14px;max-width:80ch;margin:0 0 18px}
 .open{list-style:none;margin:0;padding:0;display:flex;flex-direction:column}
@@ -321,7 +113,6 @@ td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
 .legend{display:flex;flex-wrap:wrap;gap:8px 18px;font-size:12.5px;color:var(--ink-2);margin:0}
 .legend span::before{content:"";display:inline-block;width:18px;height:3px;margin-right:6px;vertical-align:middle;background:var(--who)}
 @media (max-width:700px){.msg{grid-template-columns:52px 1fr}.msg .body{grid-column:1 / -1}.open li{grid-template-columns:1fr}}
-@media (max-width:560px){.langsw{right:16px}}
 </style>
 <header class="band"><div class="wrap"><div class="tb">
 <div class="tb-name"><span class="eyebrow">Casa Lunca Sighet 100</span><h1>Jurnal de șantier</h1></div><dl class="tb-grid">
@@ -329,11 +120,17 @@ td{padding:9px 10px;border-bottom:1px solid var(--rule);vertical-align:top}
 <div><dt>Cum se ține</dt><dd>Claude citește grupul la 9:00 și 18:00, adaugă intrările și actualizează site-ul unde discuția schimbă o decizie</dd></div>
 <div><dt>Regula</dt><dd>Intrările nu se rescriu, doar se adaugă. Când o discuție schimbă ceva pe site, scrie aici „efect pe site”</dd></div>
 <div><dt>Beneficiar</dt><dd>Energy Asset Investment SRL</dd></div>
-<div><dt>Actualizat</dt><dd class="mono">11.09.2026, 14:45</dd></div></dl></div>
+<div><dt>Actualizat</dt><dd class="mono">18.09.2026, 18:10</dd></div></dl></div>
 <a class="back" href="index.html">← Site-ul de șantier</a>
 <a class="back" href="planse.html" style="margin-left:8px">Planșe proiect →</a>
 <a class="back" href="instalatii.html" style="margin-left:8px">Planșe instalații →</a>
 </div></header><main class="wrap"><div class="view">
-<div class="block"><div class="jhead"><h2>Deschis din discuții</h2><span class="eyebrow">4 puncte</span></div><p class="jsub">Ce a ieșit din grup și nu are încă o concluzie. Se închid când apare decizia — în grup sau pe șantier.</p><ul class="open"><li><span class="pkt">Băi</span><div><div class="ot">Pereții dublați pe profile 50 pierd 62,5 mm pe cameră (50 profil + 12,5 placă). Studiile băilor și cotele finite decise (ex. Sasha 330 × 330) au fost calculate pe alte alcătuiri — de reconciliat înainte ca Lulu să retraseze.</div><div class="om">de închis: Andrei + Cipri Beleanu + Lulu · deschis din 11.09</div></div></li><li><span class="pkt">Structură</span><div><div class="ot">Lulu: „sunt locuri unde trebuie să negociem” la placarea pereților — face o schiță. Ce locuri, și ce se cedează (grosime perete vs. dimensiune finită)?</div><div class="om">de închis: Lulu Folert · deschis din 11.09</div></div></li><li><span class="pkt">Șarpantă</span><div><div class="ot">Comanda pieselor metalice de la grinzi (AM1–AM3) — Cubitschi a găsit detaliul AM3 și se ocupă. Confirmarea că s-a lansat comanda nu a apărut încă în grup.</div><div class="om">de închis: Ciprian Cubitschi · deschis din 11.09</div></div></li><li><span class="pkt">Șarpantă</span><div><div class="ot">Andrei vrea să dea azi comanda pentru grinzile lamelare (GL24h 100 × 360). Confirmarea scrisă a structuristului (R10-Rev1 scrie încă GL 26h + ignifugat) e încă deschisă pe site.</div><div class="om">de închis: Andrei · deschis din 11.09</div></div></li></ul></div><p class="legend"><span class="p-andrei">beneficiar</span><span class="p-arh">arhitect</span><span class="p-santier">Fhaus / șantier</span><span class="p-echipa">echipă</span><span class="p-claude">Claude</span></p><section class="day"><div class="day-h"><h2>Vineri, 11 septembrie 2026</h2><span>6 intrări</span></div><article class="msg"><span class="t">11:09</span><div class="who p-andrei"><b>Andrei Dinga</b><span>beneficiar</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/sarpanta">Șarpantă ↗</a><span class="tag k-intrebare">Întrebare / deschis</span></div><div class="txt">Întreabă @Cipri Cubitschi dacă s-a lansat comanda pentru piesele metalice de la grinzi. Vrea să dea azi comanda pentru grinzile lamelare.</div></div></article><article class="msg"><span class="t">11:11</span><div class="who p-santier"><b>Ciprian Cubitschi</b><span>șef de șantier · Fhaus</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/sarpanta">Șarpantă ↗</a><span class="tag k-intrebare">Întrebare / deschis</span></div><div class="txt">„Ar trebui și detaliul pentru piesa AM3.” Andrei: a fost trimis, e acolo.</div></div></article><article class="msg"><span class="t">11:23</span><div class="who p-santier"><b>Ciprian Cubitschi</b><span>șef de șantier · Fhaus</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/sarpanta">Șarpantă ↗</a><span class="tag k-decizie">Decis</span></div><div class="txt">„Ok, am găsit, mă ocup.” — detaliul AM3 (R.13) e în folder și pe pagina de planșe.</div><div class="eff"><b>Efect pe site:</b> Nimic de schimbat pe site; comanda pieselor rămâne punct deschis până la confirmare.</div></div></article><article class="msg"><span class="t">12:11</span><div class="who p-arh"><b>Cipri Beleanu</b><span>arhitect · ARTINITIATORS</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/bai">Băi ↗</a><span class="tag k-propunere">Propunere</span></div><div class="txt">Cere lui Lulu să redeseneze planurile cu finisajul pereților distanțat de zidărie, ca să confirme mobilarea și să vadă dacă apar alte detalii. Propune placare pe profile 50: UW50 pe podea și tavan (40 × 50 mm), CW50 vertical (50 × 50 mm), gips-carton 12,5 mm standard. Spațiu liber net în profil 50 mm (copex gros, țevi de apă, cabluri mari); grosime totală pierdută pe cameră 62,5 mm. CW50 vine ștanțat cu decupaje „H” pentru cabluri pe orizontală, fără tăieri manuale.</div><div class="eff"><b>Efect pe site:</b> Propunere nouă de alcătuire pentru pereții dublați — intră ca punct deschis la Băi (cotele finite).</div></div></article><article class="msg"><span class="t">12:14</span><div class="who p-santier"><b>Lulu Folert</b><span>Fhaus</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/structura">Structură ↗</a><span class="tag k-intrebare">Întrebare / deschis</span></div><div class="txt">„Sunt locuri unde trebuie să negociem, fac o schiță să discutăm.”</div></div></article><article class="msg"><span class="t">12:16</span><div class="who p-arh"><b>Cipri Beleanu</b><span>arhitect · ARTINITIATORS</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/bai">Băi ↗</a><span class="tag k-decizie">Decis</span></div><div class="txt">Vorbim de placarea tuturor suprafețelor interioare de perete; pentru secțiunile mari (HVAC, coloane de pluviale sau canalizare) se validează în parte, pe fiecare local. Lulu: „atunci e ok” 👍 · „restul trebuie discutat”.</div><div class="eff"><b>Efect pe site:</b> Principiu agreat: toți pereții interiori se placează pe profile; excepțiile (trasee mari) se decid per încăpere.</div></div></article></section><section class="day"><div class="day-h"><h2>Joi, 10 septembrie 2026</h2><span>1 intrări</span></div><article class="msg"><span class="t">18:12</span><div class="who p-andrei"><b>Andrei Dinga</b><span>beneficiar</span></div><div class="body"><div class="tags"><span class="tag">General</span><span class="tag k-info">Info</span></div><div class="txt">Trimite în grup link-ul site-ului de șantier „Șantier Lunca Sighet 100”. Grupul: Calin Tomsa, Cipri Beleanu, Ciprian Cubitschi (Fhaus), Lulu Folert, Szobi, Andrei.</div></div></article></section><p class="note">Intrările sunt rezumate ale mesajelor, nu citate integrale; citatele exacte sunt între ghilimele. Sursa rămâne grupul WhatsApp. Pe site: <a href="index.html">Șantier Lunca Sighet 100</a>.</p><footer class="foot">Ultima citire a grupului: 11.09.2026, 14:45. Următoarele: zilnic la 9:00 și 18:00.</footer></div></main>
-<script type="application/json" id="jurnal-data">{"updated": "11.09.2026, 14:45", "people": {"andrei": {"name": "Andrei Dinga", "role": "beneficiar", "cls": "p-andrei"}, "belean": {"name": "Cipri Beleanu", "role": "arhitect · ARTINITIATORS", "cls": "p-arh"}, "cubitschi": {"name": "Ciprian Cubitschi", "role": "șef de șantier · Fhaus", "cls": "p-santier"}, "lulu": {"name": "Lulu Folert", "role": "Fhaus", "cls": "p-santier"}, "calin": {"name": "Calin Tomsa", "role": "echipă", "cls": "p-echipa"}, "szobi": {"name": "Szobi", "role": "echipă", "cls": "p-echipa"}, "claude": {"name": "Claude", "role": "redactor jurnal", "cls": "p-claude"}}, "open": [{"id": "o1", "pk": "Băi", "pkid": "bai", "text": "Pereții dublați pe profile 50 pierd 62,5 mm pe cameră (50 profil + 12,5 placă). Studiile băilor și cotele finite decise (ex. Sasha 330 × 330) au fost calculate pe alte alcătuiri — de reconciliat înainte ca Lulu să retraseze.", "who": "Andrei + Cipri Beleanu + Lulu", "since": "11.09"}, {"id": "o2", "pk": "Structură", "pkid": "structura", "text": "Lulu: „sunt locuri unde trebuie să negociem” la placarea pereților — face o schiță. Ce locuri, și ce se cedează (grosime perete vs. dimensiune finită)?", "who": "Lulu Folert", "since": "11.09"}, {"id": "o3", "pk": "Șarpantă", "pkid": "sarpanta", "text": "Comanda pieselor metalice de la grinzi (AM1–AM3) — Cubitschi a găsit detaliul AM3 și se ocupă. Confirmarea că s-a lansat comanda nu a apărut încă în grup.", "who": "Ciprian Cubitschi", "since": "11.09"}, {"id": "o4", "pk": "Șarpantă", "pkid": "sarpanta", "text": "Andrei vrea să dea azi comanda pentru grinzile lamelare (GL24h 100 × 360). Confirmarea scrisă a structuristului (R10-Rev1 scrie încă GL 26h + ignifugat) e încă deschisă pe site.", "who": "Andrei", "since": "11.09"}], "days": [{"date": "11.09.2026", "label": "Vineri, 11 septembrie 2026", "items": [{"t": "11:09", "who": "andrei", "pk": "Șarpantă", "pkid": "sarpanta", "text": "Întreabă @Cipri Cubitschi dacă s-a lansat comanda pentru piesele metalice de la grinzi. Vrea să dea azi comanda pentru grinzile lamelare.", "kind": "intrebare"}, {"t": "11:11", "who": "cubitschi", "pk": "Șarpantă", "pkid": "sarpanta", "text": "„Ar trebui și detaliul pentru piesa AM3.” Andrei: a fost trimis, e acolo.", "kind": "intrebare"}, {"t": "11:23", "who": "cubitschi", "pk": "Șarpantă", "pkid": "sarpanta", "text": "„Ok, am găsit, mă ocup.” — detaliul AM3 (R.13) e în folder și pe pagina de planșe.", "kind": "decizie", "effect": "Nimic de schimbat pe site; comanda pieselor rămâne punct deschis până la confirmare."}, {"t": "12:11", "who": "belean", "pk": "Băi", "pkid": "bai", "text": "Cere lui Lulu să redeseneze planurile cu finisajul pereților distanțat de zidărie, ca să confirme mobilarea și să vadă dacă apar alte detalii. Propune placare pe profile 50: UW50 pe podea și tavan (40 × 50 mm), CW50 vertical (50 × 50 mm), gips-carton 12,5 mm standard. Spațiu liber net în profil 50 mm (copex gros, țevi de apă, cabluri mari); grosime totală pierdută pe cameră 62,5 mm. CW50 vine ștanțat cu decupaje „H” pentru cabluri pe orizontală, fără tăieri manuale.", "kind": "propunere", "effect": "Propunere nouă de alcătuire pentru pereții dublați — intră ca punct deschis la Băi (cotele finite)."}, {"t": "12:14", "who": "lulu", "pk": "Structură", "pkid": "structura", "text": "„Sunt locuri unde trebuie să negociem, fac o schiță să discutăm.”", "kind": "intrebare"}, {"t": "12:16", "who": "belean", "pk": "Băi", "pkid": "bai", "text": "Vorbim de placarea tuturor suprafețelor interioare de perete; pentru secțiunile mari (HVAC, coloane de pluviale sau canalizare) se validează în parte, pe fiecare local. Lulu: „atunci e ok” 👍 · „restul trebuie discutat”.", "kind": "decizie", "effect": "Principiu agreat: toți pereții interiori se placează pe profile; excepțiile (trasee mari) se decid per încăpere."}]}, {"date": "10.09.2026", "label": "Joi, 10 septembrie 2026", "items": [{"t": "18:12", "who": "andrei", "pk": "General", "pkid": "", "text": "Trimite în grup link-ul site-ului de șantier „Șantier Lunca Sighet 100”. Grupul: Calin Tomsa, Cipri Beleanu, Ciprian Cubitschi (Fhaus), Lulu Folert, Szobi, Andrei.", "kind": "info"}]}]}</script>
+<div class="block"><div class="jhead"><h2>Deschis din discuții</h2><span class="eyebrow">6 puncte</span></div><p class="jsub">Ce a ieșit din grup și nu are încă o concluzie. Se închid când apare decizia — în grup sau pe șantier.</p><ul class="open"><li><span class="pkt">Băi</span><div><div class="ot">Pereții dublați pe profile 50 pierd 62,5 mm pe cameră (50 profil + 12,5 placă). Studiile băilor și cotele finite decise (ex. Sasha 330 × 330) au fost calculate pe alte alcătuiri — de reconciliat înainte ca Lulu să retraseze.</div><div class="om">de închis: Andrei + Cipri Beleanu + Lulu · deschis din 11.09</div></div></li><li><span class="pkt">Structură</span><div><div class="ot">Lulu: „sunt locuri unde trebuie să negociem” la placarea pereților — face o schiță. Ce locuri, și ce se cedează (grosime perete vs. dimensiune finită)?</div><div class="om">de închis: Lulu Folert · deschis din 11.09</div></div></li><li><span class="pkt">Șarpantă</span><div><div class="ot">Comanda pieselor metalice de la grinzi (AM1–AM3) — Cubitschi a găsit detaliul AM3 pe 11.09 și „se ocupă”. Andrei a întrebat din nou pe 18.09 („ai dat în lucru piesele metalice?”); niciun răspuns în grup până la 18.09, 18:00.</div><div class="om">de închis: Ciprian Cubitschi · deschis din 11.09</div></div></li><li><span class="pkt">Șarpantă</span><div><div class="ot">Andrei vrea să dea azi comanda pentru grinzile lamelare (GL24h 100 × 360). Confirmarea scrisă a structuristului (R10-Rev1 scrie încă GL 26h + ignifugat) e încă deschisă pe site.</div><div class="om">de închis: Andrei · deschis din 11.09</div></div></li><li><span class="pkt">Structură</span><div><div class="ot">Andrei semnalează (cu trimitere la site) că trecerile prin planșeul de parter pentru scurgerile de pe acoperiș nu au fost făcute (vezi R05-rev2 „treceri prin grinzi” pe pagina de planșe). Lulu nu a putut deschide linkul claude.ai; pe 14.09 Andrei a trimis linkul GitHub Pages. Nu a apărut încă un răspuns de la Fhaus despre ce se face.</div><div class="om">de închis: Ciprian Cubitschi / Lulu Folert · deschis din 11.09</div></div></li><li><span class="pkt">General</span><div><div class="ot">Întâlnire de coordonare a lucrărilor pe șantier, luni 21.09 (propusă de Andrei în grup pe 18.09). Ora și cine vine nu au fost confirmate în grup.</div><div class="om">de închis: Andrei + Fhaus + Cipri Beleanu · deschis din 18.09</div></div></li></ul><p class="jsub" style="margin:14px 0 0"><b>Închise:</b> General — Linkul claude.ai nu se deschidea la Lulu — închis 14.09: Andrei a trimis în grup linkul stabil GitHub Pages.</p></div>
+<p class="legend"><span class="p-andrei">beneficiar</span><span class="p-arh">arhitect</span><span class="p-santier">Fhaus / șantier</span><span class="p-echipa">echipă</span><span class="p-claude">Claude</span></p>
+<section class="day"><div class="day-h"><h2>Vineri, 18 septembrie 2026</h2><span>3 intrări</span></div><article class="msg"><span class="t">09:30</span><div class="who p-andrei"><b>Andrei Dinga</b><span>beneficiar</span></div><div class="body"><div class="tags"><span class="tag">General</span><span class="tag k-propunere">Propunere</span></div><div class="txt">„Salutare. Luni ne întâlnim să coordonăm lucrările.” — propune întâlnire de coordonare pe șantier luni, 21.09.</div><div class="eff"><b>Efect pe site:</b> Nimic de schimbat în pachete. Întâlnirea intră ca punct deschis (ora și participanții neconfirmate în grup).</div></div></article><article class="msg"><span class="t">09:31</span><div class="who p-andrei"><b>Andrei Dinga</b><span>beneficiar</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/sarpanta">Șarpantă ↗</a><span class="tag k-intrebare">Întrebare / deschis</span></div><div class="txt">„@Cipri C. — ai dat în lucru piesele metalice?” — a doua întrebare despre comanda pieselor metalice AM1–AM3 (prima pe 11.09). Fără răspuns în grup până la 18:00.</div><div class="eff"><b>Efect pe site:</b> Nimic de schimbat pe site; punctul deschis „comanda pieselor metalice” rămâne, cu întrebarea repetată.</div></div></article><article class="msg"><span class="t">18:07</span><div class="who p-claude"><b>Claude</b><span>redactor jurnal</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/structura">Structură ↗</a><span class="tag k-info">Info</span></div><div class="txt">Planșe noi în folderul „Planuri proiect”: a apărut folderul „Fhaus - documente unice” (8 fișiere). Adăugate pe pagina Planșe proiect, grup nou „Rezistență — dispoziție de șantier 2025”: R.01-Rev.1 plan fundații, R.02-Rev.1 detalii fundații, R.04-Rev.1 armare sâmburi și stâlpi (ing. Andreica, PDF-uri din 24.06.2025, subfolderul „Dispozitie santier”) și „PT - plan fundatii parter comentarii” (11.09.2025, două zone încercuite cu roșu la axele C–D / 12–13). Neadăugate: „R01 … varianta DTAC Fhaus.pdf” (copia planșei R.01 DTAC deja pe pagină), „Elevatie 1 m.pdf” (placeholder gol), DWG-urile „D'ANDREI DTAC 12 (varianta Fhaus)” și „D'ANDREI PSIT AC sebi farcas”. Folderul „_de_sters (copii scan duplicate)” a dispărut din Rezistenta 2024. Total 396 fișiere (390 pe 14.09).</div><div class="eff"><b>Efect pe site:</b> Pagina Planșe proiect: 47 planșe (43 înainte); notă la R.01/R.02/R.04 din 2024 că sunt revizuite de Rev.1 din iunie 2025.</div></div></article></section>
+<section class="day"><div class="day-h"><h2>Luni, 14 septembrie 2026</h2><span>2 intrări</span></div><article class="msg"><span class="t">09:10</span><div class="who p-andrei"><b>Andrei Dinga</b><span>beneficiar</span></div><div class="body"><div class="tags"><span class="tag">General</span><span class="tag k-info">Info</span></div><div class="txt">Trimite în grup linkul stabil al site-ului de șantier — https://andreidinga.github.io/lunca-sighet-100/ — „asta e link-ul bun” (răspuns la Lulu, 11.09: linkul claude.ai nu se deschidea).</div><div class="eff"><b>Efect pe site:</b> Nimic pe conținut. Punctul deschis „link care nu se deschide” se închide; echipa are acum linkul GitHub Pages. Trecerile prin planșeu pentru scurgeri (Structură) rămân fără răspuns de la Fhaus.</div></div></article><article class="msg"><span class="t">13:15</span><div class="who p-claude"><b>Claude</b><span>redactor jurnal</span></div><div class="body"><div class="tags"><span class="tag">General</span><span class="tag k-info">Info</span></div><div class="txt">Verificarea folderului „Planuri proiect”: 390 fișiere, nimic nou sau modificat față de 13.09. Rularea de 9:00 a pornit cu întârziere (legătura cu Mac-ul a picat de două ori la start); citirea grupului s-a făcut la 13:15.</div></div></article></section>
+<section class="day"><div class="day-h"><h2>Vineri, 11 septembrie 2026</h2><span>9 intrări</span></div><article class="msg"><span class="t">11:09</span><div class="who p-andrei"><b>Andrei Dinga</b><span>beneficiar</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/sarpanta">Șarpantă ↗</a><span class="tag k-intrebare">Întrebare / deschis</span></div><div class="txt">Întreabă @Cipri Cubitschi dacă s-a lansat comanda pentru piesele metalice de la grinzi. Vrea să dea azi comanda pentru grinzile lamelare.</div></div></article><article class="msg"><span class="t">11:11</span><div class="who p-santier"><b>Ciprian Cubitschi</b><span>șef de șantier · Fhaus</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/sarpanta">Șarpantă ↗</a><span class="tag k-intrebare">Întrebare / deschis</span></div><div class="txt">„Ar trebui și detaliul pentru piesa AM3.” Andrei: a fost trimis, e acolo.</div></div></article><article class="msg"><span class="t">11:23</span><div class="who p-santier"><b>Ciprian Cubitschi</b><span>șef de șantier · Fhaus</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/sarpanta">Șarpantă ↗</a><span class="tag k-decizie">Decis</span></div><div class="txt">„Ok, am găsit, mă ocup.” — detaliul AM3 (R.13) e în folder și pe pagina de planșe.</div><div class="eff"><b>Efect pe site:</b> Nimic de schimbat pe site; comanda pieselor rămâne punct deschis până la confirmare.</div></div></article><article class="msg"><span class="t">12:11</span><div class="who p-arh"><b>Cipri Beleanu</b><span>arhitect · ARTINITIATORS</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/bai">Băi ↗</a><span class="tag k-propunere">Propunere</span></div><div class="txt">Cere lui Lulu să redeseneze planurile cu finisajul pereților distanțat de zidărie, ca să confirme mobilarea și să vadă dacă apar alte detalii. Propune placare pe profile 50: UW50 pe podea și tavan (40 × 50 mm), CW50 vertical (50 × 50 mm), gips-carton 12,5 mm standard. Spațiu liber net în profil 50 mm (copex gros, țevi de apă, cabluri mari); grosime totală pierdută pe cameră 62,5 mm. CW50 vine ștanțat cu decupaje „H” pentru cabluri pe orizontală, fără tăieri manuale.</div><div class="eff"><b>Efect pe site:</b> Propunere nouă de alcătuire pentru pereții dublați — intră ca punct deschis la Băi (cotele finite).</div></div></article><article class="msg"><span class="t">12:14</span><div class="who p-santier"><b>Lulu Folert</b><span>Fhaus</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/structura">Structură ↗</a><span class="tag k-intrebare">Întrebare / deschis</span></div><div class="txt">„Sunt locuri unde trebuie să negociem, fac o schiță să discutăm.”</div></div></article><article class="msg"><span class="t">12:16</span><div class="who p-arh"><b>Cipri Beleanu</b><span>arhitect · ARTINITIATORS</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/bai">Băi ↗</a><span class="tag k-decizie">Decis</span></div><div class="txt">Vorbim de placarea tuturor suprafețelor interioare de perete; pentru secțiunile mari (HVAC, coloane de pluviale sau canalizare) se validează în parte, pe fiecare local. Lulu: „atunci e ok” 👍 · „restul trebuie discutat”.</div><div class="eff"><b>Efect pe site:</b> Principiu agreat: toți pereții interiori se placează pe profile; excepțiile (trasee mari) se decid per încăpere.</div></div></article><article class="msg"><span class="t">15:34</span><div class="who p-andrei"><b>Andrei Dinga</b><span>beneficiar</span></div><div class="body"><div class="tags"><span class="tag">General</span><span class="tag k-info">Info</span></div><div class="txt">Retrimite în grup linkul site-ului de șantier (card „Claude Artifact”).</div></div></article><article class="msg"><span class="t">15:35</span><div class="who p-andrei"><b>Andrei Dinga</b><span>beneficiar</span></div><div class="body"><div class="tags"><a class="tag" href="index.html#pachete/structura">Structură ↗</a><span class="tag k-intrebare">Întrebare / deschis</span></div><div class="txt">„Aici se vede unde nu s-au făcut trecerile prin planșeul de parter la scurgerile de pe acoperiș!” — trimitere la site (planșeul peste parter / R05-rev2 „treceri prin grinzi”).</div><div class="eff"><b>Efect pe site:</b> Punct deschis nou la Structură: trecerile prin planșeu pentru scurgeri. Fără răspuns de la Fhaus până la citirea din 14.09, 9:00.</div></div></article><article class="msg"><span class="t">16:22</span><div class="who p-santier"><b>Lulu Folert</b><span>Fhaus</span></div><div class="body"><div class="tags"><span class="tag">General</span><span class="tag k-intrebare">Întrebare / deschis</span></div><div class="txt">„Nu se vede..” · „adică nu se deschide linkul..” — linkul claude.ai nu se deschide la Lulu. Andrei (16:39): „Imediat”.</div><div class="eff"><b>Efect pe site:</b> Nimic pe conținut. Din 13.09 seara există linkul stabil GitHub Pages (andreidinga.github.io/lunca-sighet-100) — de trimis echipei în locul linkurilor claude.ai.</div></div></article></section>
+<section class="day"><div class="day-h"><h2>Joi, 10 septembrie 2026</h2><span>1 intrări</span></div><article class="msg"><span class="t">18:12</span><div class="who p-andrei"><b>Andrei Dinga</b><span>beneficiar</span></div><div class="body"><div class="tags"><span class="tag">General</span><span class="tag k-info">Info</span></div><div class="txt">Trimite în grup link-ul site-ului de șantier „Șantier Lunca Sighet 100”. Grupul: Calin Tomsa, Cipri Beleanu, Ciprian Cubitschi (Fhaus), Lulu Folert, Szobi, Andrei.</div></div></article></section>
+<p class="note">Intrările sunt rezumate ale mesajelor, nu citate integrale; citatele exacte sunt între ghilimele. Sursa rămâne grupul WhatsApp. Pe site: <a href="index.html">Șantier Lunca Sighet 100</a>.</p><footer class="foot">Ultima citire a grupului: 18.09.2026, 18:10. Următoarele: zilnic la 9:00 și 18:00.</footer></div></main>
+<script type="application/json" id="jurnal-data">{"updated": "18.09.2026, 18:10", "people": {"andrei": {"name": "Andrei Dinga", "role": "beneficiar", "cls": "p-andrei"}, "belean": {"name": "Cipri Beleanu", "role": "arhitect · ARTINITIATORS", "cls": "p-arh"}, "cubitschi": {"name": "Ciprian Cubitschi", "role": "șef de șantier · Fhaus", "cls": "p-santier"}, "lulu": {"name": "Lulu Folert", "role": "Fhaus", "cls": "p-santier"}, "calin": {"name": "Calin Tomsa", "role": "echipă", "cls": "p-echipa"}, "szobi": {"name": "Szobi", "role": "echipă", "cls": "p-echipa"}, "claude": {"name": "Claude", "role": "redactor jurnal", "cls": "p-claude"}}, "open": [{"id": "o1", "pk": "Băi", "pkid": "bai", "text": "Pereții dublați pe profile 50 pierd 62,5 mm pe cameră (50 profil + 12,5 placă). Studiile băilor și cotele finite decise (ex. Sasha 330 × 330) au fost calculate pe alte alcătuiri — de reconciliat înainte ca Lulu să retraseze.", "who": "Andrei + Cipri Beleanu + Lulu", "since": "11.09"}, {"id": "o2", "pk": "Structură", "pkid": "structura", "text": "Lulu: „sunt locuri unde trebuie să negociem” la placarea pereților — face o schiță. Ce locuri, și ce se cedează (grosime perete vs. dimensiune finită)?", "who": "Lulu Folert", "since": "11.09"}, {"id": "o3", "pk": "Șarpantă", "pkid": "sarpanta", "text": "Comanda pieselor metalice de la grinzi (AM1–AM3) — Cubitschi a găsit detaliul AM3 pe 11.09 și „se ocupă”. Andrei a întrebat din nou pe 18.09 („ai dat în lucru piesele metalice?”); niciun răspuns în grup până la 18.09, 18:00.", "who": "Ciprian Cubitschi", "since": "11.09"}, {"id": "o4", "pk": "Șarpantă", "pkid": "sarpanta", "text": "Andrei vrea să dea azi comanda pentru grinzile lamelare (GL24h 100 × 360). Confirmarea scrisă a structuristului (R10-Rev1 scrie încă GL 26h + ignifugat) e încă deschisă pe site.", "who": "Andrei", "since": "11.09"}, {"id": "o5", "pk": "Structură", "pkid": "structura", "text": "Andrei semnalează (cu trimitere la site) că trecerile prin planșeul de parter pentru scurgerile de pe acoperiș nu au fost făcute (vezi R05-rev2 „treceri prin grinzi” pe pagina de planșe). Lulu nu a putut deschide linkul claude.ai; pe 14.09 Andrei a trimis linkul GitHub Pages. Nu a apărut încă un răspuns de la Fhaus despre ce se face.", "who": "Ciprian Cubitschi / Lulu Folert", "since": "11.09"}, {"id": "o7", "pk": "General", "pkid": "", "text": "Întâlnire de coordonare a lucrărilor pe șantier, luni 21.09 (propusă de Andrei în grup pe 18.09). Ora și cine vine nu au fost confirmate în grup.", "who": "Andrei + Fhaus + Cipri Beleanu", "since": "18.09"}], "closed": [{"id": "o6", "pk": "General", "text": "Linkul claude.ai nu se deschidea la Lulu — închis 14.09: Andrei a trimis în grup linkul stabil GitHub Pages.", "closed": "14.09"}], "days": [{"date": "18.09.2026", "label": "Vineri, 18 septembrie 2026", "items": [{"t": "09:30", "who": "andrei", "pk": "General", "pkid": "", "text": "„Salutare. Luni ne întâlnim să coordonăm lucrările.” — propune întâlnire de coordonare pe șantier luni, 21.09.", "kind": "propunere", "effect": "Nimic de schimbat în pachete. Întâlnirea intră ca punct deschis (ora și participanții neconfirmate în grup)."}, {"t": "09:31", "who": "andrei", "pk": "Șarpantă", "pkid": "sarpanta", "text": "„@Cipri C. — ai dat în lucru piesele metalice?” — a doua întrebare despre comanda pieselor metalice AM1–AM3 (prima pe 11.09). Fără răspuns în grup până la 18:00.", "kind": "intrebare", "effect": "Nimic de schimbat pe site; punctul deschis „comanda pieselor metalice” rămâne, cu întrebarea repetată."}, {"t": "18:07", "who": "claude", "pk": "Structură", "pkid": "structura", "text": "Planșe noi în folderul „Planuri proiect”: a apărut folderul „Fhaus - documente unice” (8 fișiere). Adăugate pe pagina Planșe proiect, grup nou „Rezistență — dispoziție de șantier 2025”: R.01-Rev.1 plan fundații, R.02-Rev.1 detalii fundații, R.04-Rev.1 armare sâmburi și stâlpi (ing. Andreica, PDF-uri din 24.06.2025, subfolderul „Dispozitie santier”) și „PT - plan fundatii parter comentarii” (11.09.2025, două zone încercuite cu roșu la axele C–D / 12–13). Neadăugate: „R01 … varianta DTAC Fhaus.pdf” (copia planșei R.01 DTAC deja pe pagină), „Elevatie 1 m.pdf” (placeholder gol), DWG-urile „D'ANDREI DTAC 12 (varianta Fhaus)” și „D'ANDREI PSIT AC sebi farcas”. Folderul „_de_sters (copii scan duplicate)” a dispărut din Rezistenta 2024. Total 396 fișiere (390 pe 14.09).", "kind": "info", "effect": "Pagina Planșe proiect: 47 planșe (43 înainte); notă la R.01/R.02/R.04 din 2024 că sunt revizuite de Rev.1 din iunie 2025."}]}, {"date": "14.09.2026", "label": "Luni, 14 septembrie 2026", "items": [{"t": "09:10", "who": "andrei", "pk": "General", "pkid": "", "text": "Trimite în grup linkul stabil al site-ului de șantier — https://andreidinga.github.io/lunca-sighet-100/ — „asta e link-ul bun” (răspuns la Lulu, 11.09: linkul claude.ai nu se deschidea).", "kind": "info", "effect": "Nimic pe conținut. Punctul deschis „link care nu se deschide” se închide; echipa are acum linkul GitHub Pages. Trecerile prin planșeu pentru scurgeri (Structură) rămân fără răspuns de la Fhaus."}, {"t": "13:15", "who": "claude", "pk": "General", "pkid": "", "text": "Verificarea folderului „Planuri proiect”: 390 fișiere, nimic nou sau modificat față de 13.09. Rularea de 9:00 a pornit cu întârziere (legătura cu Mac-ul a picat de două ori la start); citirea grupului s-a făcut la 13:15.", "kind": "info"}]}, {"date": "11.09.2026", "label": "Vineri, 11 septembrie 2026", "items": [{"t": "11:09", "who": "andrei", "pk": "Șarpantă", "pkid": "sarpanta", "text": "Întreabă @Cipri Cubitschi dacă s-a lansat comanda pentru piesele metalice de la grinzi. Vrea să dea azi comanda pentru grinzile lamelare.", "kind": "intrebare"}, {"t": "11:11", "who": "cubitschi", "pk": "Șarpantă", "pkid": "sarpanta", "text": "„Ar trebui și detaliul pentru piesa AM3.” Andrei: a fost trimis, e acolo.", "kind": "intrebare"}, {"t": "11:23", "who": "cubitschi", "pk": "Șarpantă", "pkid": "sarpanta", "text": "„Ok, am găsit, mă ocup.” — detaliul AM3 (R.13) e în folder și pe pagina de planșe.", "kind": "decizie", "effect": "Nimic de schimbat pe site; comanda pieselor rămâne punct deschis până la confirmare."}, {"t": "12:11", "who": "belean", "pk": "Băi", "pkid": "bai", "text": "Cere lui Lulu să redeseneze planurile cu finisajul pereților distanțat de zidărie, ca să confirme mobilarea și să vadă dacă apar alte detalii. Propune placare pe profile 50: UW50 pe podea și tavan (40 × 50 mm), CW50 vertical (50 × 50 mm), gips-carton 12,5 mm standard. Spațiu liber net în profil 50 mm (copex gros, țevi de apă, cabluri mari); grosime totală pierdută pe cameră 62,5 mm. CW50 vine ștanțat cu decupaje „H” pentru cabluri pe orizontală, fără tăieri manuale.", "kind": "propunere", "effect": "Propunere nouă de alcătuire pentru pereții dublați — intră ca punct deschis la Băi (cotele finite)."}, {"t": "12:14", "who": "lulu", "pk": "Structură", "pkid": "structura", "text": "„Sunt locuri unde trebuie să negociem, fac o schiță să discutăm.”", "kind": "intrebare"}, {"t": "12:16", "who": "belean", "pk": "Băi", "pkid": "bai", "text": "Vorbim de placarea tuturor suprafețelor interioare de perete; pentru secțiunile mari (HVAC, coloane de pluviale sau canalizare) se validează în parte, pe fiecare local. Lulu: „atunci e ok” 👍 · „restul trebuie discutat”.", "kind": "decizie", "effect": "Principiu agreat: toți pereții interiori se placează pe profile; excepțiile (trasee mari) se decid per încăpere."}, {"t": "15:34", "who": "andrei", "pk": "General", "pkid": "", "text": "Retrimite în grup linkul site-ului de șantier (card „Claude Artifact”).", "kind": "info"}, {"t": "15:35", "who": "andrei", "pk": "Structură", "pkid": "structura", "text": "„Aici se vede unde nu s-au făcut trecerile prin planșeul de parter la scurgerile de pe acoperiș!” — trimitere la site (planșeul peste parter / R05-rev2 „treceri prin grinzi”).", "kind": "intrebare", "effect": "Punct deschis nou la Structură: trecerile prin planșeu pentru scurgeri. Fără răspuns de la Fhaus până la citirea din 14.09, 9:00."}, {"t": "16:22", "who": "lulu", "pk": "General", "pkid": "", "text": "„Nu se vede..” · „adică nu se deschide linkul..” — linkul claude.ai nu se deschide la Lulu. Andrei (16:39): „Imediat”.", "kind": "intrebare", "effect": "Nimic pe conținut. Din 13.09 seara există linkul stabil GitHub Pages (andreidinga.github.io/lunca-sighet-100) — de trimis echipei în locul linkurilor claude.ai."}]}, {"date": "10.09.2026", "label": "Joi, 10 septembrie 2026", "items": [{"t": "18:12", "who": "andrei", "pk": "General", "pkid": "", "text": "Trimite în grup link-ul site-ului de șantier „Șantier Lunca Sighet 100”. Grupul: Calin Tomsa, Cipri Beleanu, Ciprian Cubitschi (Fhaus), Lulu Folert, Szobi, Andrei.", "kind": "info"}]}]}</script>
 </body></html>
