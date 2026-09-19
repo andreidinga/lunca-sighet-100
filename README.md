@@ -9,11 +9,13 @@ Pagini statice generate din artifactele Claude ale casei, publicate pe GitHub Pa
 | `jurnal.html` | Jurnal de șantier — `8b7c86f6` |
 | `planse.html` | Planșe proiect — `30feb1be` |
 | `instalatii.html` | Planșe instalații — `5eabaa01` |
+| `randari.html` | Randări — `JNY9ydoC` |
 
 ## Cum se regenerează
 
 1. Se descarcă `index.html` din fiecare artifact (tool-ul Artifact, `action: "read_file"`)
-   într-un director cu subfolderele `index/`, `jurnal/`, `planse/`, `instalatii/`.
+   într-un director cu subfolderele `index/`, `jurnal/`, `planse/`,
+   `instalatii/`, `randari/`.
 2. `python3 tools/build.py <dir_cu_html_brut> .`
 
 Scriptul taie învelișul artifactului (tot până la `<body>` inclusiv și `</body></html>`

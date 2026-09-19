@@ -7,19 +7,22 @@ action="read_file") si le scrie ca pagini de sine statatoare in radacina repo-ul
     python3 tools/build.py <dir_cu_html_brut>
 
 unde <dir_cu_html_brut> contine: index/index.html, jurnal/index.html,
-planse/index.html, instalatii/index.html
+planse/index.html, instalatii/index.html, randari/index.html
 """
 import re
 import sys
 from pathlib import Path
 
-# prefixul de id al artifactului -> pagina locala
-ID_PREFIXES = {
-    "c19277be": "index.html",     # Santier Lunca Sighet 100
-    "295bdf4b": "index.html",     # varianta mai veche a paginii de santier
-    "8b7c86f6": "jurnal.html",    # Jurnal de santier
-    "30feb1be": "planse.html",    # Planse proiect
+# id de artifact -> pagina locala. Linkurile vin in doua forme:
+#   https://claude.ai/code/artifact/<uuid>  -> cheia e prefixul de 8 caractere
+#   https://claude.ai/artifact/<id scurt>   -> cheia e id-ul intreg
+ARTIFACTS = {
+    "c19277be": "index.html",       # Santier Lunca Sighet 100
+    "295bdf4b": "index.html",       # varianta mai veche a paginii de santier
+    "8b7c86f6": "jurnal.html",      # Jurnal de santier
+    "30feb1be": "planse.html",      # Planse proiect
     "5eabaa01": "instalatii.html",  # Planse instalatii
+    "JNY9ydoCZZKjirvHU8GDW6": "randari.html",  # Randari Lunca Sighet
 }
 
 SOURCES = {
@@ -27,6 +30,7 @@ SOURCES = {
     "jurnal.html": "jurnal",
     "planse.html": "planse",
     "instalatii.html": "instalatii",
+    "randari.html": "randari",
 }
 
 HEAD = ('<!doctype html><html><head><meta charset="utf-8">'
@@ -34,9 +38,11 @@ HEAD = ('<!doctype html><html><head><meta charset="utf-8">'
         '<meta name="robots" content="noindex,nofollow"></head><body>')
 TAIL = "</body></html>"
 
-# https://claude.ai/code/artifact/<id>[/oricesuffix][#fragment]
+# https://claude.ai/artifact/<id> sau https://claude.ai/code/artifact/<id>,
+# cu sufixe de cale optionale; fragmentul (#...) ramane neatins
 LINK_RE = re.compile(
-    r"https://claude\.ai/code/artifact/([0-9a-f]{8})[0-9a-f-]*(?:/[A-Za-z0-9._~-]*)*"
+    r"https://claude\.ai/(?:code/)?artifact/"
+    r"([A-Za-z0-9][A-Za-z0-9-]*)(?:/[A-Za-z0-9._~-]*)*"
 )
 # target="_blank" rel="noopener" in orice ordine / cu ghilimele simple sau duble
 ATTR_RE = re.compile(
@@ -44,20 +50,30 @@ ATTR_RE = re.compile(
 
 
 def strip_shell(html: str) -> str:
-    """Taie tot pana la primul <body> inclusiv si </body></html> de la final."""
+    """Taie tot pana la primul <body> inclusiv si </body></html> de la final.
+
+    Unele artifacte au continutul incheiat cu propriul </body></html>, peste care
+    invelisul artifactului mai adauga unul; se taie toate cele de la final.
+    """
     i = html.find("<body>")
     if i == -1:
         raise SystemExit("nu am gasit <body>")
-    body = html[i + len("<body>"):]
-    body = body.rstrip()
+    body = html[i + len("<body>"):].rstrip()
     if not body.endswith(TAIL):
         raise SystemExit("nu se termina cu </body></html>")
-    return body[: -len(TAIL)].rstrip("\n")
+    while body.endswith(TAIL):
+        body = body[: -len(TAIL)].rstrip()
+    return body
+
+
+def page_for(artifact_id: str) -> str | None:
+    """Pagina locala pentru un id de artifact: id intreg, altfel prefix de uuid."""
+    return ARTIFACTS.get(artifact_id) or ARTIFACTS.get(artifact_id[:8])
 
 
 def rewrite_links(body: str) -> str:
     def sub(m):
-        page = ID_PREFIXES.get(m.group(1))
+        page = page_for(m.group(1))
         if page is None:
             raise SystemExit(f"id de artifact necunoscut in link: {m.group(0)}")
         return page
@@ -84,8 +100,8 @@ def check(out_dir: Path) -> None:
     problems = []
     for page in SOURCES:
         text = (out_dir / page).read_text(encoding="utf-8")
-        if "claude.ai/code/artifact" in text:
-            problems.append(f"{page}: a ramas un link claude.ai/code/artifact")
+        if "claude.ai/artifact" in text or "claude.ai/code/artifact" in text:
+            problems.append(f"{page}: a ramas un link claude.ai de artifact")
         if 'target="_blank"' in text or 'rel="noopener"' in text:
             problems.append(f"{page}: a ramas target=_blank / rel=noopener")
         # cauta preturi doar in textul vizibil: fara data URI, script, style
