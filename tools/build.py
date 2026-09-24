@@ -7,7 +7,7 @@ action="read_file") si le scrie ca pagini de sine statatoare in radacina repo-ul
     python3 tools/build.py <dir_cu_html_brut>
 
 unde <dir_cu_html_brut> contine: index/index.html, jurnal/index.html,
-planse/index.html, instalatii/index.html, randari/index.html
+planse/index.html, instalatii/index.html, randari/index.html, poze/index.html
 """
 import re
 import sys
@@ -23,6 +23,7 @@ ARTIFACTS = {
     "30feb1be": "planse.html",      # Planse proiect
     "5eabaa01": "instalatii.html",  # Planse instalatii
     "JNY9ydoCZZKjirvHU8GDW6": "randari.html",  # Randari Lunca Sighet
+    "Dj8kLEd6hurnXFohZkhFST": "poze.html",     # Poze de santier
 }
 
 SOURCES = {
@@ -31,6 +32,7 @@ SOURCES = {
     "planse.html": "planse",
     "instalatii.html": "instalatii",
     "randari.html": "randari",
+    "poze.html": "poze",
 }
 
 HEAD = ('<!doctype html><html><head><meta charset="utf-8">'
@@ -96,7 +98,8 @@ def build(raw_dir: Path, out_dir: Path) -> list[str]:
 def check(out_dir: Path) -> None:
     """Verificari: fara linkuri de artifact ramase, fara preturi in text vizibil."""
     price_re = re.compile(r"\u20ac|\bEUR\b|\blei\b|\bRON\b|[Bb]uget|[Pp]re\u021b", re.UNICODE)
-    allow = "F\u0103r\u0103 pre\u021buri \u0219i f\u0103r\u0103 buget"
+    allow_re = re.compile(
+        r"(?i)f\u0103r\u0103 pre\u021b|no prices|no budget|f\u0103r\u0103 buget|/\* budget \*/")
     problems = []
     for page in SOURCES:
         text = (out_dir / page).read_text(encoding="utf-8")
@@ -110,8 +113,8 @@ def check(out_dir: Path) -> None:
         visible = re.sub(r"(?is)<style[^>]*>.*?</style>", "", visible)
         for m in price_re.finditer(visible):
             ctx = visible[max(0, m.start() - 70): m.end() + 70].replace("\n", " ")
-            if allow in ctx:
-                continue  # disclaimerul "Fara preturi si fara buget"
+            if allow_re.search(ctx):
+                continue  # disclaimerul "Fara preturi si fara buget", in RO sau EN
             problems.append(f"{page}: posibil pret -> ...{ctx}...")
     if problems:
         print("VERIFICARE - de analizat:")

@@ -27,7 +27,7 @@ Sincronizează site-ul static Lunca Sighet 100 cu ultima versiune a artifactelor
 
 Repo: `andreidinga/lunca-sighet-100`, branch `main`. Lucrează în clona locală a sesiunii.
 
-**1. Descarcă HTML-ul brut al celor 5 artifacte.** Folosește tool-ul `Artifact` cu
+**1. Descarcă HTML-ul brut al celor 6 artifacte.** Folosește tool-ul `Artifact` cu
 `action: "read_file"` și `path: "index.html"` — NU `action: "read"`, care pentru pagini mari
 returnează doar un fragment. Salvează fiecare artifact în subfolderul lui, într-un director
 de lucru curat din scratchpad (de exemplu `<scratchpad>/raw/`):
@@ -39,6 +39,7 @@ de lucru curat din scratchpad (de exemplu `<scratchpad>/raw/`):
 | `planse/` | https://claude.ai/code/artifact/30feb1be-4f26-43d1-b971-3bb3360a3b9d |
 | `instalatii/` | https://claude.ai/code/artifact/5eabaa01-5252-4b02-8e82-e504c36e313a |
 | `randari/` | https://claude.ai/artifact/JNY9ydoCZZKjirvHU8GDW6 |
+| `poze/` | https://claude.ai/artifact/Dj8kLEd6hurnXFohZkhFST |
 
 Linkurile de artifact apar în două forme — `claude.ai/code/artifact/<uuid>` și
 `claude.ai/artifact/<id scurt>`. Ambele sunt tratate de `tools/build.py`.
